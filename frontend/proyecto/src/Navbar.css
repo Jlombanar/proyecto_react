@@ -1,0 +1,44 @@
+.Navbar {
+    
+  
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+}
+
+.Navbar img {
+    width: 120px;
+    height: auto;
+}
+
+
+.Navbar nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar ul li {
+    margin: 0 15px;
+}
+
+.Navbar ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.Navbar .title {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
