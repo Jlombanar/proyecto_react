@@ -5,7 +5,7 @@ import Login from './Login';
 import Home from './Home';
 import Sitios from './Sitios';
 import Productos from './Productos';
-import Regiter from './Register'
+
 
 
 
@@ -21,7 +21,7 @@ function App() {
     <Route path="/login" element={<Login />} />
     <Route path="/Sitios" element={<Sitios />} />
     <Route path="/Productos" element={<Productos />} />
-    <Route path="/Register" element={<Regiter />} />
+ 
     
     
     </Routes>
