@@ -5,7 +5,7 @@ import Login from './Login';
 import Home from './Home';
 import Sitios from './Sitios';
 import Productos from './Productos';
-import Register from './Register'
+import Register from './register'
 
 
 
