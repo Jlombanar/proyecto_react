@@ -32,9 +32,9 @@ export function Login() {
         <main>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <h2> Inicio de sesion</h2>
-                    <input type="email" placeholder="email" onChange ={e => setEmail(e.target.value)}/>
-                    <input type="password" placeholder="contraseña" onChange ={e => setPassword(e.target.value)}/>
+                    <h2> Inicio de sesion en nuestra empresa</h2>
+                    <input type="email" placeholder="email" onChange ={e => setEmail(e.target.value)} required/>
+                    <input type="password" placeholder="contraseña" onChange ={e => setPassword(e.target.value)} required/>
                 </div>
                 <button>INGRESAR</button>
             

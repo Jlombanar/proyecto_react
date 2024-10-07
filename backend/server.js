@@ -2,6 +2,9 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 //2 - configuracion
 const app = express();
@@ -10,10 +13,11 @@ app.use(cors());
 
 //3 - conexion
 const conexion = mysql.createConnection({
-    host: "localhost",
-    database: "personas",
-    user: "root",
-    password: ""
+  host: process.env.MYSQL_ADDON_HOST,
+  database: process.env.MYSQL_ADDON_DB,
+  user: process.env.MYSQL_ADDON_USER,
+  password: process.env.MYSQL_ADDON_PASSWORD  
+
 });
 
 //4 - rutas
@@ -38,9 +42,8 @@ app.post('/register', (req, res) => {
   // Verificar si el correo ya está registrado
   const dbCheck = "SELECT * FROM administradores WHERE email = ?";
   conexion.query(dbCheck, [email], (err, data) => {
-    if (err) return res.status(50).json({ success: false, message: "Error en el registro" });
 
-    if (data.length > 0) {
+    if (data && data.length > 0) {
       return res.status(400).json({ success: false, message: "El correo electrónico ya está registrado" });
     } else {
       // Insertar el nuevo usuario con el email y la contraseña proporcionados
