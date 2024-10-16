@@ -13,10 +13,7 @@ app.use(cors());
 
 //3 - conexion
 const conexion = mysql.createConnection({
-  host: process.env.MYSQL_ADDON_HOST,
-  database: process.env.MYSQL_ADDON_DB,
-  user: process.env.MYSQL_ADDON_USER,
-  password: process.env.MYSQL_ADDON_PASSWORD  
+  
 
 });
 
@@ -29,7 +26,7 @@ app.post('/login', (req, res) => {
         
   
       if (data.length > 0) {
-        return res.status(200).json({ success: true, message: "BIENVENIDO A LA PLATAFORMA" });
+        return res.status(200).json({ success: true, message: "BIENVENIDO A LA PLATAFORMA jimmy lombana" });
       } else {
         return res.status(401).json({ success: false, message: "Usuario o contraseña incorrectos" });
       }
