@@ -30,7 +30,7 @@ app.post('/login', (req, res) => {
         
   
       if (data.length > 0) {
-        return res.status(200).json({ success: true, message: "BIENVENIDO A LA PLATAFORMA jimmy lombana" });
+        return res.status(200).json({ success: true, message: "BIENVENIDO A LA PLATAFORMA " });
       } else {
         return res.status(401).json({ success: false, message: "Usuario o contraseña incorrectos" });
       }
