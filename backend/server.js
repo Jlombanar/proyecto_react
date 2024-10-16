@@ -4,19 +4,17 @@ const mysql = require("mysql");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
-dotenv.config();
+
 
 //2 - configuracion
 const app = express();
 app.use(express.json());
 app.use(cors());
+dotenv.config();
 
 //3 - conexion
 const conexion = mysql.createConnection({
-  host: process.env.MYSQL_ADDON_HOST,
-  database: process.env.MYSQL_ADDON_DB,
-  user: process.env.MYSQL_ADDON_USER,
-  password:process.env.MYSQL_ADDON_PASSWORD
+ 
   
 
 });
